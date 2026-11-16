@@ -2,9 +2,13 @@
 {% assign dark = page.header-dark | is_nil: site.header-dark | is_nil: true %}
 
 {% assign svg = "images/logo.svg" | file_exists %}
-{% assign png = "images/logo.png" | file_exists %}
+{% assign png = "images/icon.png" | file_exists %}
 {% assign jpg = "images/logo.jpg" | file_exists %}
 {% assign logo = svg | default: png | default: jpg | default: nil %}
+
+{% if page.url == "/" %}
+  {% assign big = true %}
+{% endif %}
 
 <header
   class="background"
@@ -12,7 +16,7 @@
   {% if dark == true or dark == false %}
     data-dark="{{ dark }}"
   {% endif %}
-  {% if page.url == "/" %}
+  {% if big %}
     data-big
   {% endif %}
 >
@@ -31,12 +35,16 @@
         {% if site.title and site.show-title != false %}
           <span class="title">{{ site.title }}</span>
         {% endif %}
-        {% if site.subtitle and site.show-subtitle != false %}
+        {% if site.subtitle and site.show-subtitle != false and big != true %}
           <span class="subtitle">{{ site.subtitle }}</span>
         {% endif %}
       </span>
     {% endif %}
   </a>
+
+  {% if site.subtitle and site.show-subtitle != false and big %}
+    <span class="subtitle">{{ site.subtitle }}</span>
+  {% endif %}
 
   <input class="nav-toggle" type="checkbox" aria-label="show/hide nav">
 

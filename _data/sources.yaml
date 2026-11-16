@@ -1,23 +1,82 @@
-- id: doi:10.1371/journal.pcbi.1007128
-  type: paper
-  description: Lorem ipsum _dolor_ **sit amet**, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-  date: 2020-12-4
-  image: https://journals.plos.org/ploscompbiol/article/figure/image?size=inline&id=info:doi/10.1371/journal.pcbi.1007128.g001&rev=2
-  buttons:
-    - type: manubot
-      link: https://greenelab.github.io/meta-review/
-    - type: source
-      text: Manuscript Source
-      link: https://github.com/greenelab/meta-review
-    - type: website
-      link: http://manubot.org/
-  tags:
-    - open science
-    - collaboration
-  repo: greenelab/meta-review
+# add papers by hand here (e.g. ones not on your ORCID, or to add images/descriptions/buttons)
+# example:
+# - id: doi:10.1371/journal.pcbi.1007128
+#   image: https://example.com/figure.png
+#   description: Short summary of the paper.
 
-- id: doi:10.1016/j.csbj.2020.05.017
-  image: https://ars.els-cdn.com/content/image/1-s2.0-S2001037020302804-gr1.jpg
+# figures for papers on the research page
+# image can be a full url (https://...) or a path in this repo (e.g. images/papers/piglet.png)
 
-- id: doi:10.7554/eLife.32822
-  image: https://iiif.elifesciences.org/lax:32822%2Felife-32822-fig8-v3.tif/full/863,/0/default.webp
+# TikTok is a valuable data source for tracking the opioid crisis
+- id: doi:10.1038/s41746-026-02654-x
+  image: images/papers/tiktok.webp
+
+# Drug-Target Interaction Prediction with PIGLET
+- id: doi:10.64898/2026.02.18.706530
+  image: images/papers/piglet.jpg
+
+# Large language models can disambiguate opioid slang on social media
+# (arXiv only provides the year, so set the posting date)
+- id: doi:10.48550/ARXIV.2603.10313
+  date: 2026-03-11
+  image: images/papers/disambiguation.png
+
+# The Human Omnibus of Targetable Pockets
+- id: doi:10.1186/s13321-025-01125-x
+  image: images/papers/hotpocket.png
+
+# Which social media platforms facilitate monitoring the opioid crisis?
+- id: doi:10.1371/journal.pdig.0000842
+  image: images/papers/social_media_pharmacovigilance.jpeg
+
+# Databases of ligand-binding pockets and protein-ligand interactions
+- id: doi:10.1016/j.csbj.2024.03.015
+  image: images/papers/pocket_dbs_review.png
+
+# Using GPT-3 to Build a Lexicon of Drugs of Abuse Synonyms for Social Media
+- id: doi:10.3390/biom13020387
+  image: images/papers/gpt3_lexicon.jpg
+
+
+# papers to exclude from the research page
+# match by id, or by exact title (case-insensitive) for papers with no id
+
+# Drugs and where to find them
+- id: doi:10.25740/vy423fc7431
+  remove: true
+
+# PathwayQA
+- id: doi:10.1101/2025.08.12.669911
+  remove: true
+
+# RNA-Puzzles Round V
+- id: doi:10.1038/s41592-024-02543-9
+  remove: true
+
+# Training data composition (published version and preprint)
+- id: pmid:34890132
+  remove: true
+- id: doi:10.1101/2021.09.30.462647
+  remove: true
+
+# Capturing biologically complex tissue-specific membranes
+- id: doi:10.1021/acs.jpcb.0c03368
+  remove: true
+
+# Which social media platforms facilitate monitoring the opioid crisis? (preprint)
+- id: doi:10.1101/2024.07.06.24310035
+  remove: true
+
+# The Human Omnibus of Targetable Pockets (preprint)
+- id: doi:10.1101/2025.09.18.677190
+  remove: true
+
+# 2019 papers (no ids on ORCID, so matched by title)
+- title: "Identification and Analysis of Alzheimer's Candidate Genes by an Amplitude Deviation Algorithm"
+  remove: true
+- title: "Deep Learning and Virtual Drug Screening"
+  remove: true
+- title: "Machine Learning-based Virtual Screening and Its Applications to Alzheimer's Drug Discovery"
+  remove: true
+- title: "Is It a Prime Time for AI-powered Virtual Drug Screening?"
+  remove: true

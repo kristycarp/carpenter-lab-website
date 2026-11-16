@@ -1,11 +1,12 @@
 ---
 ---
 
-$logo-big: 80px;
-$logo: 40px;
-$big-padding: 100px;
+$logo-big: 120px;
+$logo: 60px;
+$big-padding: 40px;
 $collapse: 700px;
 $sticky: true;
+$background: #333333;
 
 header {
   display: flex;
@@ -21,6 +22,10 @@ header {
     top: 0;
     z-index: 10 !important;
   }
+}
+
+header.background {
+  background: $background;
 }
 
 header a {
@@ -113,6 +118,21 @@ nav > a:hover {
 }
 
 header:not([data-big]) {
+  // shift title down to sit like it does next to the logo on the home page
+  .title-text {
+    position: relative;
+    top: $logo * 0.28;
+  }
+
+  // pull title close to the logo, like on the home page
+  .home {
+    gap: 0;
+  }
+
+  .logo {
+    margin-right: -10px;
+  }
+
   @media (max-width: $collapse) {
     justify-content: flex-end;
 
@@ -143,23 +163,33 @@ header[data-big] {
   }
 
   .home {
-    flex-direction: column;
     flex-grow: 0;
+    gap: 0;
   }
 
   .logo {
     height: $logo-big;
     flex-shrink: 0;
+    // negative to pull title into the empty space around the logo image
+    margin-right: -20px;
   }
 
-  .title-text {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
 
   .title {
-    font-size: var(--xxl);
+    position: relative;
+    top: 0.85em;
+    font-size: 2.5rem;
+  }
+
+  @media (max-width: $collapse) {
+    .logo {
+      height: $logo;
+      margin-right: -10px;
+    }
+
+    .title {
+      font-size: var(--xxl);
+    }
   }
 
   .subtitle {

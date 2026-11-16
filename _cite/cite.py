@@ -2,6 +2,7 @@
 cite process to convert sources and metasources into full citations
 """
 
+import re
 import traceback
 from importlib import import_module
 from pathlib import Path
@@ -120,6 +121,13 @@ log("Generating citations")
 # list of new citations
 citations = []
 
+# titles flagged for removal, to remove sources that have no id to match on
+remove_titles = [
+    get_safe(source, "title", "").strip().lower()
+    for source in sources
+    if get_safe(source, "remove", False) == True and get_safe(source, "title", "")
+]
+
 
 # loop through compiled sources
 for index, source in enumerate(sources):
@@ -127,6 +135,10 @@ for index, source in enumerate(sources):
 
     # if explicitly flagged, remove/ignore entry
     if get_safe(source, "remove", False) == True:
+        continue
+
+    # if title flagged for removal, remove/ignore entry
+    if get_safe(source, "title", "").strip().lower() in remove_titles:
         continue
 
     # new citation data for source
@@ -162,6 +174,13 @@ for index, source in enumerate(sources):
 
     # preserve fields from input source, overriding existing fields
     citation.update(source)
+
+    # skip papers not yet published, which publishers list with a placeholder
+    # title like "pendingpublications" until the real metadata is released
+    title = re.sub(r"[^a-z]", "", get_safe(citation, "title", "").lower())
+    if title.startswith("pendingpub"):
+        log("Skipping pending publication", indent=1)
+        continue
 
     # ensure date in proper format for correct date sorting
     if get_safe(citation, "date", ""):

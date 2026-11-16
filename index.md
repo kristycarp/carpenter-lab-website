@@ -1,9 +1,11 @@
 ---
 ---
 
-# kristycarp's Website
+# Biomolecular AI for therapeutic development
 
-An engaging 1-3 sentence description of your lab.
+The Carpenter Lab at the University of Colorado Anschutz is led by Kristy Carpenter, PhD, Assistant Professor in the Department of Biomedical Informatics. The core mission of the lab is twofold: to develop biomolecular machine learning methods that accelerate key tasks in early-stage drug discovery, and to leverage computational tools and big data to better understand and manage substance use disorders.
+
+We officially open the lab on December 1, 2026!
 
 {% include section.html %}
 
@@ -11,12 +13,12 @@ An engaging 1-3 sentence description of your lab.
 
 {% capture text %}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+Learn about the work that lays the foundation for the lab and read our plans for the future.
 
 {%
   include button.html
   link="research"
-  text="See our publications"
+  text="See more"
   icon="fa-solid fa-arrow-right"
   flip=true
   style="bare"
@@ -26,12 +28,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 {%
   include feature.html
-  image="images/photo.jpg"
+  image="images/papers/hotpocket.png"
   link="research"
   title="Our Research"
   text=text
 %}
 
+{% comment %} projects section hidden for now; remove this comment wrapper to bring it back
 {% capture text %}
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -56,15 +59,16 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
   style="bare"
   text=text
 %}
+{% endcomment %}
 
 {% capture text %}
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+We are actively searching for our inaugural team members, including undergraduates, MS students, PhD students, and full-time staff.
 
 {%
   include button.html
-  link="team"
-  text="Meet our team"
+  link="join"
+  text="See available opportunities"
   icon="fa-solid fa-arrow-right"
   flip=true
   style="bare"
@@ -74,7 +78,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 {%
   include feature.html
-  image="images/photo.jpg"
+  image="images/team.png"
   link="team"
   title="Our Team"
   text=text

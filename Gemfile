@@ -4,6 +4,9 @@ source "https://rubygems.org"
 gem "jekyll", "~> 4.3"
 gem "webrick", "~> 1.7"
 
+# pin logger to avoid Jekyll 4.3.2 crash with logger 1.6+
+gem "logger", "< 1.6"
+
 gem "html-proofer", "~> 5.0"
 
 # plugins

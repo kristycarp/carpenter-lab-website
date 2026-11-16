@@ -1,4 +1,6 @@
 ---
+# hidden for now; delete these two lines to bring the page back
+published: false
 title: Blog
 nav:
   order: 4

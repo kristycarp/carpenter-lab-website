@@ -1,19 +1,17 @@
 # site properties and page defaults
-title: kristycarp
-subtitle: 
-description: An engaging 1-3 sentence description of your lab.
-header: images/background.jpg
-footer: images/background.jpg
+title: Carpenter Lab
+subtitle: University of Colorado Anschutz
+description: Homepage of the Carpenter Lab at CU Anschutz
 proofer: false
 
 # site social media and other links
 links:
-  email: contact@kristycarp.com
-  orcid: 0000-0001-8713-9213
-  google-scholar: ETJoidYAAAAJ
+  email: kristy.carpenter@cuanschutz.edu
+  orcid: 0000-0003-4570-5170
+  google-scholar: vA3YaaQAAAAJ
   github: kristycarp
-  twitter: kristycarp
-  youtube: kristycarp
+  # twitter: kristycarp
+  # youtube: kristycarp
 
 ### jekyll settings
 
@@ -34,6 +32,8 @@ defaults:
       type: "posts"
     values:
       layout: post
+      # blog hidden for now; delete these two lines to publish posts again
+      published: false
 
 collections:
   # generate page for each member
