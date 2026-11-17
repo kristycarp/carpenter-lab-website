@@ -1,1 +1,1 @@
-Sitemap: https://kristycarp.github.io/carpenter-lab-website/sitemap.xml
+Sitemap: http://www.carpenter-lab.com/sitemap.xml
