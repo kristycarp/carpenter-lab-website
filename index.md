@@ -13,6 +13,30 @@ We officially open the lab on December 1, 2026!
 
 {% capture text %}
 
+Read an article from the DBMI Communications team about Dr. Carpenter joining CU Anschutz.
+
+{%
+  include button.html
+  link="https://news.cuanschutz.edu/dbmi/kristy-carpenter"
+  text="Read it here"
+  icon="fa-solid fa-arrow-right"
+  flip=true
+  style="bare"
+%}
+
+{% endcapture %}
+
+{%
+  include feature.html
+  image="images/news_preview_image.webp"
+  link="https://news.cuanschutz.edu/dbmi/kristy-carpenter"
+  title="News"
+  text=text
+%}
+
+
+{% capture text %}
+
 Learn about the work that lays the foundation for the lab and read our plans for the future.
 
 {%
