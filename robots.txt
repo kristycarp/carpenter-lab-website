@@ -1,1 +1,1 @@
-Sitemap: http://www.carpenter-lab.com/sitemap.xml
+Sitemap: https://www.carpenter-lab.com/sitemap.xml
