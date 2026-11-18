@@ -5,6 +5,6 @@
 
   # kristycarp's Website
 
-  Visit **[www.carpenter-lab.com](http://www.carpenter-lab.com)** 🚀
+  Visit **[www.carpenter-lab.com](https://www.carpenter-lab.com)** 🚀
 
   _Built with [Lab Website Template](https://greene-lab.gitbook.io/lab-website-template-docs)_
