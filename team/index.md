@@ -11,13 +11,20 @@ We are currently building our inaugural team! Review [open positions]({{ "join" 
 
 {% include section.html %}
 
-{% include list.html data="members" component="portrait" filter="role == 'principal-investigator'" %}
-{% include list.html data="members" component="portrait" filter="role == 'postdoc'" %}
-{% include list.html data="members" component="portrait" filter="role == 'phd'" %}
-{% include list.html data="members" component="portrait" filter="role == 'ms'" %}
-{% include list.html data="members" component="portrait" filter="role == 'staff'" %}
-{% include list.html data="members" component="portrait" filter="role == 'undergrad'" %}
-{% include list.html data="members" component="portrait" filter="!['principal-investigator', 'postdoc', 'phd', 'ms', 'staff', 'undergrad'].include?(role)" %}
+{% include list.html data="members" component="portrait" filter="!placeholder && role == 'principal-investigator'" %}
+{% include list.html data="members" component="portrait" filter="!placeholder && role == 'postdoc'" %}
+{% include list.html data="members" component="portrait" filter="!placeholder && role == 'phd'" %}
+{% include list.html data="members" component="portrait" filter="!placeholder && role == 'ms'" %}
+{% include list.html data="members" component="portrait" filter="!placeholder && role == 'staff'" %}
+{% include list.html data="members" component="portrait" filter="!placeholder && role == 'undergrad'" %}
+{% include list.html data="members" component="portrait" filter="!placeholder && !['principal-investigator', 'postdoc', 'phd', 'ms', 'staff', 'undergrad'].include?(role)" %}
+{% include list.html data="members" component="portrait" filter="placeholder && role == 'principal-investigator'" %}
+{% include list.html data="members" component="portrait" filter="placeholder && role == 'postdoc'" %}
+{% include list.html data="members" component="portrait" filter="placeholder && role == 'phd'" %}
+{% include list.html data="members" component="portrait" filter="placeholder && role == 'ms'" %}
+{% include list.html data="members" component="portrait" filter="placeholder && role == 'staff'" %}
+{% include list.html data="members" component="portrait" filter="placeholder && role == 'undergrad'" %}
+{% include list.html data="members" component="portrait" filter="placeholder && !['principal-investigator', 'postdoc', 'phd', 'ms', 'staff', 'undergrad'].include?(role)" %}
 
 {% comment %}
 placeholder sections, hidden for now (remove the comment tags to show them again)

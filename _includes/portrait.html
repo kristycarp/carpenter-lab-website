@@ -42,7 +42,7 @@
       </span>
     {% endif %}
 
-    {% if member.affiliation %}
+    {% if member.affiliation and page.slug == member.slug %}
       <span class="portrait-affiliation">
         {{ member.affiliation }}
       </span>
